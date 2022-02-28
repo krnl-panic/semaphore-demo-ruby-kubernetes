@@ -8,11 +8,11 @@ blocks:
   - name: Deploy to Kubernetes
     task:
       secrets:
-        - name: do-k8s
         - name: dockerhub
+        - name: gcp-k8s
       env_vars:
         - name: KUBECONFIG
-          value: /home/semaphore/.kube/dok8s.yaml
+          value: /home/semaphore/.kube/gcpk8s.yaml
       jobs:
         - name: Deploy
           commands:
